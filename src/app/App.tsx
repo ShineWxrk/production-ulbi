@@ -1,12 +1,10 @@
-import './styles/index.scss'
-import { Link } from 'react-router-dom';
 import { useTheme } from './providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
-import { Suspense, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Suspense, useEffect, useState } from 'react';
+import { Modal } from 'shared/ui/Modal/Modal';
 
 const App = () => {
     const { theme } = useTheme()
